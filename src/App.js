@@ -5,6 +5,8 @@ import React, { Component } from 'react';
 import slugify from 'slugify';
 
 import './App.css';
+import './MainForm/MainForm'
+import MainForm from './MainForm/MainForm';
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -101,11 +103,12 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <form className="main__form">
+          {/* <form className="main__form">
             <h2>Customize your laptop</h2>
             {features}
-          </form>
-          <section className="main__summary">
+          </form> */}
+          <MainForm />
+          {/* <section className="main__summary">
             <h2>Your cart</h2>
             {summary}
             <div className="summary__total">
@@ -114,7 +117,7 @@ class App extends Component {
                 {USCurrencyFormat.format(total)}
               </div>
             </div>
-          </section>
+          </section> */}
         </main>
       </div>
     );

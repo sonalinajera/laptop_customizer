@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './FeatureOptions.css'
 import slugify from 'slugify';
 
 //converts numbers to US currency :D 

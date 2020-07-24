@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Features from '../Features/Features'
+import './MainForm.css'
 
 export class MainForm extends Component {
     render() {

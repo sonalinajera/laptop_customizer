@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './SummaryTotal.css'
 
 //converts number to US dollarz
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {

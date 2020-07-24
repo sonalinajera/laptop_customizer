@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import Summary from '../Summary/Summary'
+import SummaryCart from '../SummaryCart/SummaryCart'
+import SummaryTotal from '../SummaryTotal/SummaryTotal'
 
 export class MainSummary extends Component {
     render() {
         return (
             <section className="main__summary">
                 <h2>Your cart</h2>
-                <Summary state={this.props.state}/>
+                <SummaryCart state={this.props.state}/>
+                <SummaryTotal state={this.props.state}/>
             </section>
         )
     }

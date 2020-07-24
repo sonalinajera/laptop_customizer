@@ -3,20 +3,7 @@ import React, { Component } from 'react'
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
 import slugify from 'slugify';
-
 import FeatureOptions from '../FeatureOptions/FeatureOptions';
-//converts numbers to US currency :D 
-
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-});
-
-
-
-
-
-
 
 export class Features extends Component {
     render() {
@@ -36,7 +23,6 @@ export class Features extends Component {
                         onChange={this.props.onChange} />
                 );
             });
-
             return (
                 <fieldset className="feature" key={featureHash}>
                     <legend className="feature__name">
@@ -46,7 +32,6 @@ export class Features extends Component {
                 </fieldset>
             );
         });
-
 
         return (
             <div>

@@ -6,8 +6,9 @@ export class MainForm extends Component {
         return (
             <form className="main__form">
             <h2>Customize your laptop</h2>
-            {/* {features} */}
-            <Features state={this.props.state} features={this.props.features} onChange={this.props.onChange} />
+            <Features state={this.props.state} 
+            features={this.props.features} 
+            onChange={this.props.onChange} />
           </form>
         )
     }

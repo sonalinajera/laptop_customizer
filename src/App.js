@@ -37,10 +37,6 @@ class App extends Component {
     });
   };
 
-  handleOptionSelection = (feature, newValue) => {
-    this.updateFeature(feature, newValue);
-  }
-
   render() {
 
     return (
@@ -53,7 +49,7 @@ class App extends Component {
           <MainForm 
           features={this.props.features}
           state={this.state}
-          onChange={this.handleOptionSelection}/>
+          onChange={this.updateFeature}/>
 
           <MainSummary state={this.state}/>
          

@@ -38,13 +38,17 @@ class App extends Component {
     }
   };
 
-  // updateFeature = (feature, newValue) => {
-  //   const selected = Object.assign({}, this.state.selected);
-  //   selected[feature] = newValue;
-  //   this.setState({
-  //     selected
-  //   });
-  // };
+  updateFeature = (feature, newValue) => {
+    const selected = Object.assign({}, this.state.selected);
+    selected[feature] = newValue;
+    this.setState({
+      selected
+    });
+  };
+
+  handleOptionSelection = (feature, newValue) => {
+    console.log(feature, newValue);
+  }
 
   render() {
     // const features = Object.keys(this.props.features).map((feature, idx) => {
@@ -112,10 +116,11 @@ class App extends Component {
           </form> */}
 
           
-          <MainForm features={this.props.features}/>
+          <MainForm features={this.props.features}
+          onChange={this.handleOptionSelection}/>
 
 
-          <MainSummary />
+          <MainSummary state={this.state}/>
           {/* <section className="main__summary">
             <h2>Your cart</h2>
             {summary}

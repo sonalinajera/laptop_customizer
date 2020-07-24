@@ -19,7 +19,7 @@ export class FeatureOptions extends Component {
                     id={this.props.itemHash}
                     className="feature__option"
                     name={slugify(this.props.feature)}
-                    checked={this.props.item.name === this.props.state.selected[this.props.feature].name}
+                    checked={this.props.item.name === this.props.selected.selected[this.props.feature].name}
                     onChange={() => this.props.onChange(this.props.feature, this.props.item)}
                 />
                 <label htmlFor={this.props.itemHash} className="feature__label">

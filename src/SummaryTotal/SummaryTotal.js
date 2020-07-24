@@ -9,8 +9,8 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 
 export class SummaryTotal extends Component {
     render() {
-         const total = Object.keys(this.props.state.selected).reduce(
-            (acc, curr) => acc + this.props.state.selected[curr].cost,
+         const total = Object.keys(this.props.selected.selected).reduce(
+            (acc, curr) => acc + this.props.selected.selected[curr].cost,
             0
         );
         return (

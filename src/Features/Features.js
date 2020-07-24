@@ -1,45 +1,44 @@
-import React, { Component } from 'react'
-import FeatureOptions from '../FeatureOptions/FeatureOptions';
-import './Features.css'
+const FEATURES = {
+    Processor: [
+      {
+        name: '17th Generation Intel Core HB (7 Core with donut spare)',
+        cost: 700
+      },
+      {
+        name: 'Professor X AMD Fire Breather with sidewinder technology',
+        cost: 1200
+      }
+    ],
+    "Operating System": [
+      {
+        name: 'Ubuntu Linux 16.04',
+        cost: 200
+      },
+      {
+        name: 'Bodhi Linux',
+        cost: 300
+      }
+    ],
+    "Video Card": [
+      {
+        name: 'Toyota Corolla 1.5v',
+        cost: 1150.98
+      },
+      {
+        name: 'Mind mild breeze 2000',
+        cost: 1345
+      }
+    ],
+    Display: [
+      {
+        name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
+        cost: 1500
+      },
+      {
+        name: '15.3" HGTV (3840 x 2160) Home makeover edition',
+        cost: 1400
+      },
+    ]
+  };
 
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-import slugify from 'slugify';
-
-export class Features extends Component {
-    render() {
-        const features = Object.keys(this.props.features).map((feature, idx) => {
-            const featureHash = feature + '-' + idx;
-            const options = this.props.features[feature].map(item => {
-                const itemHash = slugify(JSON.stringify(item));
-                return (
-
-                    <FeatureOptions key={itemHash}
-                        id={itemHash}
-                        itemHash={itemHash}
-                        state={this.props.state}
-                        features={this.props.features}
-                        feature={feature}
-                        item={item}
-                        onChange={this.props.onChange} />
-                );
-            });
-            return (
-                <fieldset className="feature" key={featureHash}>
-                    <legend className="feature__name">
-                        <h3>{feature}</h3>
-                    </legend>
-                    {options}
-                </fieldset>
-            );
-        });
-
-        return (
-            <div>
-                {features}
-            </div>
-        )
-    }
-}
-
-export default Features
+  export default FEATURES

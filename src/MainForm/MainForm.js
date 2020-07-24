@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Features from '../Features/Features'
+import FeaturesList from '../Features/FeaturesList'
 import './MainForm.css'
 
 export class MainForm extends Component {
@@ -7,8 +7,7 @@ export class MainForm extends Component {
         return (
             <form className="main__form">
             <h2>Customize your laptop</h2>
-            <Features state={this.props.state} 
-            features={this.props.features} 
+            <FeaturesList selected={this.props.selected} 
             onChange={this.props.onChange} />
           </form>
         )

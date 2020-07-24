@@ -47,11 +47,10 @@ class App extends Component {
         <main>
           
           <MainForm 
-          features={this.props.features}
-          state={this.state}
+          selected={this.state}
           onChange={this.updateFeature}/>
 
-          <MainSummary state={this.state}/>
+          <MainSummary selected={this.state}/>
          
         </main>
       </div>

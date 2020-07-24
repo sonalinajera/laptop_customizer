@@ -10,10 +10,10 @@ export class Summary extends Component {
     
     render() {
 
-        const summary = Object.keys(this.props.state.selected).map((feature, idx) => {
+        const summary = Object.keys(this.props.selected.selected).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
 
-            const selectedOption = this.props.state.selected[feature];
+            const selectedOption = this.props.selected.selected[feature];
 
             return (
                 <div className="summary__option" key={featureHash}>
